@@ -3,7 +3,7 @@ from scrap import scrap_falabella
 from config import URLS
 
 def start():
-    for i in    URLS: 
+    for i in URLS: 
         result = api_request(i)
         scrap_falabella(result)
 

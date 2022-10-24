@@ -7,8 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-
-    
-    
+    <h1>Elemento de la tienda de Falabella</h1>
+    {% if data %}
+        {% for d in data %}
+            <h1>{{d.title}}</h1>
+            <p>{{d.category}}</p>
+            <h3>{{d.price}}</h3>
+            <div>
+                <p>{{d.link}}</p>
+            </div>
+            <p>{{d.image}}</p>
+        {% endfor %}
+    {% else %}
+        <h1>No data</h1>
+    {% endif %}
 </body>
 </html>
